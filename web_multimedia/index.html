@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>web_multimedia</title>
+        <link href="styles/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    </head>
+
+    <body>
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="images/img1.jpg" style="width:100%">
+    <div class="text">Париж</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="images/img2.jpg" style="width:100%">
+    <div class="text">Барселона</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="images/img3.jpg" style="width:100%">
+    <div class="text">Санкт-Петербург</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="images/img4.jpg" style="width:100%">
+    <div class="text">Владивосток</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<div style="text-align:center" class="timer">
+  <p id="timerLabel">Время переключения слайдов: 5 секунд</p>
+  <button value="3" onclick="setTimer(3)" class="timerBtn">3</button>
+  <button value="5" onclick="setTimer(5)" class="timerBtn">5</button>
+  <button value="10" onclick="setTimer(10)" class="timerBtn">10</button>
+</div>
+
+<!--Music player-->
+<div class="music-container" id="music-container">
+  <div class="music-info">
+    <h4 id="title"></h4>
+    <div class="progress-container" id="progress-container">
+      <div class="progress" id="progress"></div>
+    </div>
+  </div>
+
+  <audio src="music/kish.mp3" id="audio"></audio>
+
+  <div class="img-container">
+    <img src="images/kish.jpg" alt="music-cover" id="cover" />
+  </div>
+  <div class="navigation">
+    <button id="prev" class="action-btn">
+      <i class="fas fa-backward"></i>
+    </button>
+    <button id="play" class="action-btn action-btn-big">
+      <i class="fas fa-play"></i>
+    </button>
+    <button id="next" class="action-btn">
+      <i class="fas fa-forward"></i>
+    </button>
+  </div>
+</div>
+
+
+
+    <script src="scripts/music.js"></script>
+    <script src="scripts/slideshow.js"></script>
+    </body>
+</html>
